@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion PROP_COMPILE_SDK_VERSION.toInteger()
-    buildToolsVersion PROP_BUILD_TOOLS_VERSION
+    compileSdkVersion 29//PROP_COMPILE_SDK_VERSION.toInteger()
+    //buildToolsVersion PROP_BUILD_TOOLS_VERSION
     useLibrary  'org.apache.http.legacy'
     defaultConfig {
         minSdkVersion PROP_MIN_SDK_VERSION
-        targetSdkVersion PROP_TARGET_SDK_VERSION
+        targetSdkVersion 29//PROP_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
     }
@@ -27,6 +27,7 @@ android {
 
 dependencies {
     implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.android.billingclient:billing:2.1.0'
     implementation project(':zip_file')
     implementation fileTree(dir: '../java/libs', include: ['*.jar'])
 }
